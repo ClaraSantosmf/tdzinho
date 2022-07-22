@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDozinho</title>
+</head>
+    <body>
+        <div>
+            <form action="{% url 'enviado' %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="task_name"> Task </label>
+                    <input type="text" name="task_name">
+                </div>
+
+                <div>
+                    <label for="squad"> Squad </label>
+                    <input type="text" name="squad">
+                </div>
+
+                <div>
+                    <label for="squad"> Descrição </label>
+                    <textarea rows="6" name="descricao"></textarea>
+                </div>
+
+                <button type="submit" > Salvar task </button>
+            </form>
+        </div>
+    </body>
+</html>
