@@ -11,4 +11,5 @@ def listar_task(request):
     squad = request.POST["squad"]
     descricao = request.POST["descricao"]
     Listar.objects.create(task_name=nome_task, squad=squad, descricao=descricao)
-    return HttpResponse("Salvo")
+    contexto = Listar.objects.all()
+    return render(request, 'listinha/home.html', {'tarefinhas': contexto})

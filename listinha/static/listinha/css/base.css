@@ -1,11 +1,23 @@
 *{
     background: azure;
 }
-body {
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+}
+body, html {
     height: 100%;
     width: 100%;
 }
 .formulario{
+     display: flex;
+   justify-content: center;
+}
+
+.taks{
     display: flex;
-    justify-content: space-around;
 }
