@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Listar
 # Create your views here.
 
 def home(request):
@@ -7,5 +8,7 @@ def home(request):
 
 def listar_task(request):
     nome_task = request.POST["task_name"]
-    return HttpResponse("oi!")
-    pass
+    squad = request.POST["squad"]
+    descricao = request.POST["descricao"]
+    Listar.objects.create(task_name=nome_task, squad=squad, descricao=descricao)
+    return HttpResponse("Salvo")
