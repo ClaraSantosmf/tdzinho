@@ -1,8 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
-from listinha.views import home, listar_task
+from django.urls import path
+from listinha.views import atualizar_status, home
 
 urlpatterns = [
     path('', home, name="home"),
-    path('enviado/', listar_task, name="enviado"),
-    ]
+    path('atualizar_status/', atualizar_status, name="atualizar_status"),
+]
