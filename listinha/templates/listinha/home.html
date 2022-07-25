@@ -114,6 +114,15 @@
 
                 <button type="submit" class="btn btn-primary"> Salvar task </button>
             </form>
+            <br>
+            <div class="Taks">
+                <ul>
+        {% for i in tarefinhas %}
+        <li> <STRONG> SQUAD RESPONSÁVEL </strong> {{i.squad}}. <STRONG> TAREFA </STRONG> {{ i.task_name }} <STRONG>DESCRIÇÃO </STRONG>{{i.descricao}} </li>
+        {% endfor %}
+                </ul>
+            </div>
         </div>
+    </div>
     </body>
 </html>
